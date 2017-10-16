@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JNoticias</string>
+    <string name="title_activity_noticias">NoticiasActivity</string>
+    <string name="title_activity_detalle_noticia">DetalleNoticiaActivity</string>
+</resources>

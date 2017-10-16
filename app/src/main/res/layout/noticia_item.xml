@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="jesse.dev.jnoticias.views.noticias.NoticiaItemViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_noticia">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:weightSum="100"
+            android:background="@drawable/rectangle_rounded"
+
+            android:layout_margin="5dp"
+            android:onClick="@{viewModel::abrir}"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="70"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="30"
+                android:text="@{viewModel.title}"
+                android:padding="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.categoria}"
+            android:background="@drawable/rounded"
+            android:textColor="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+
+</layout>
+
